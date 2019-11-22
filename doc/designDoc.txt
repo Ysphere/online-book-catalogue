@@ -1,0 +1,44 @@
+**list.c:
+
+This is my linked list file, I created a singly linked list. These are just simple list from my data structure class.
+
+For book searching you can type in one of the three field(title, author, location) and it will bring up the result.
+
+For deletion, it's going to first get the index of the node then it deletes it.
+
+
+**client.c:
+
+nothing too complicate for client. I used the tcp code, professor lin gave to us. press Q or q you will exit. If you do a force exit, that's still ok
+
+
+**server.c
+
+I created to allow 64 people accessing my server at same time.
+
+if there is a missing field for example TITLE is not filled. It will be replace with UNKNOWN. I did that for safety sake. Therefore you can do something like GET TITLE UNKNOWN and it would still work.
+
+
+I did some error handling to prevent book entered twice. every time when enter new book, it would check the list to see if there is a same book.
+
+You could write everything in one line and it will still work for example, >>> GET TITLE book
+
+
+--------------Sample test result---------------
+
+>>>GET 
+>>>AUTHOR ME
+>>>                            // This is an enter key
+204,ok
+title: THIS IS A BOOK
+author: ME
+location: HEAVEN'S dooe
+
+server side:
+
+SEARCH: , ME, 
+Seach criteria-Title:0,Author:1,Location:0
+Seach criteria-Title:0,Author:1,Location:0
+
+
+
